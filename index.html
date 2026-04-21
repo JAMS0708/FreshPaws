@@ -90,7 +90,7 @@
             margin-bottom: 10px;
         }
 
-        /* Sección de Anuncios */
+        /* Sección de Novedades */
         .ads-section {
             text-align: center;
             margin-top: 50px;
@@ -117,6 +117,12 @@
             padding: 15px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .ad-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         .ad-item img {
@@ -199,7 +205,7 @@
 <body>
 
     <header>
-        <a href="https://www.instagram.com/freshpawsfordogs?igsh=Y2UydG56Mm84anA4" target="_blank" class="logo-link">
+        <a href="https://instagram.com" target="_blank" class="logo-link">
             <img src="logo.png" alt="Visita nuestro Instagram" class="logo-main">
         </a>
         <p>Fresh Paws olor ¡GUAU!</p>
@@ -250,6 +256,12 @@
                     <p>Aroma Coco</p>
                 </div>
 
+                <!-- Esta es la nueva imagen que me enviaste -->
+                <div class="ad-item">
+                    <img src="enbase.png" alt="Fresh Paws Aroma Coco Envase">
+                    <p>Nuevo Envase: Aroma Coco</p>
+                </div>
+
                 <div class="ad-item">
                     <img src="evento.png" alt="Evento Fresh Paws">
                     <p>Evento: 14/05/26</p>
@@ -268,7 +280,7 @@
 
     <footer>
         <p>¿Quieres ver más de Fresh Paws?</p>
-        <a href="https://www.instagram.com/freshpawsfordogs?igsh=Y2UydG56Mm84anA4" target="_blank" class="insta-btn">
+        <a href="https://instagram.com" target="_blank" class="insta-btn">
             Síguenos en Instagram
         </a>
     </footer>
@@ -296,8 +308,8 @@
         function openModal(key) {
             const content = info[key];
             document.getElementById('modal-content').innerHTML = `
-                <h2>${content.title}</h2>
-                <p>${content.content}</p>
+                <h2 style="color: var(--primary);">${content.title}</h2>
+                <p style="line-height: 1.6;">${content.content}</p>
             `;
             document.getElementById('overlay').style.display = 'flex';
         }
